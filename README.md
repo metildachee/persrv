@@ -10,30 +10,29 @@ python3 main.py --experiment predict_by_paddleocr_rawqueries_llava_desc_emotions
 * The expected data is in the format of:
 ```json
 {
-  "clicks_per_doc": 12.5,
-  "clip_cn_embedding": [0.0123, 0.0567, 0.0987, ...],  // 512 x 512 
-  "filepath": "/images/emojis/sunglasses.png",
-  "id": "1001",
-  "llava34b_emotions": "joy, confidence",
-  "llava34b_image_desc": "A cool emoji wearing sunglasses",
-  "llava34b_image_emotions": "happy, excited",
-  "llava_keywords": "emoji, sunglasses, cool",
-  "opus_ch_caption": "A smiley face emoji with sunglasses.",
-  "paddleocr": "smiling face with sunglasses",
-  "paddleocr_probabilities": 0.85,
+  "clicks_per_doc": 0,
+  "clip_cn_embedding": [],
+  "filepath": "",
+  "id": "",
+  "llava34b_image_desc": "",
+  "llava34b_image_emotions": "",
+  "llava_keywords": "",
+  "paddleocr": "",
+  "paddleocr_probabilities": 0,
   "paddleocr_raw_queries_embeddings": {
-    "vector": [0.1345, 0.2456, 0.0876, ...]  // 512 x 512 
+    "vector": []
   },
-  "paddleocr_texts": "emoji with glasses",
-  "paddleocr_texts_embedding": [0.0234, 0.0678, 0.0345, ...],
-  "raw_queries": "emoji, smile, cool glasses",
+  "paddleocr_texts": "",
+  "paddleocr_texts_embedding": [],
+  "raw_queries": "",
   "raw_queries_embeddings": {
-    "vector": [0.2234, 0.4876, 0.3456, ...]
+    "vector": []
   },
-  "type": ".jpg",
-  "unique_users_per_doc": 125.5,
-  "versatility": 0.75
+  "type": "",
+  "unique_users_per_doc": 0,
+  "versatility": 0
 }
+
 ```
 
 The finetuned model will be released online upon the publication of our paper.
