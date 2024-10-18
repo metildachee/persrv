@@ -2,7 +2,7 @@
 
 To run:
 ```bash
-python3 main.py --experiment predict_by_paddleocr_rawqueries_llava_desc_emotions_zeroshot_keywords_versatility --test_file <path_to_test_file> --similarity_file "/path/to/similarity_file.csv" --output_dir <path_to_output_directory> --counts 10 20 50 --hyp1 0.3 --hyp2 0 --hyp3 1.0 --size 100
+python3 main.py --experiment "" --test_file <path_to_test_file> --similarity_file "/path/to/similarity_file.csv" --output_dir <path_to_output_directory> --counts 10 20 50 --hyp1 0.3 --hyp2 0 --hyp3 1.0 --size 100
 ```
 
 * `--test_file`: `userid,query,docid` csv file.
