@@ -7,7 +7,7 @@ python3 main.py --experiment "" --test_file <path_to_test_file> --similarity_fil
 
 * `--test_file`: `userid,query,docid` csv file.
 * `--similarity_file`: `userid,clusterid,centroid_vector,centroid_docid,threshold` csv file.
-* The expected data is in the format of:
+* The expected data is in the format of;
 ```json
 {
   "clicks_per_doc": 0,
