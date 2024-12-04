@@ -94,7 +94,7 @@ def run_experiment(experiment_title, test_file, output_dir, similarity_file, cou
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run an experiment.')
     parser.add_argument('--experiment', type=str, required=True, help='The name of the experiment to run.')
-    parser.add_argument('--test_file', type=str, required=True, help='Path to the test file (CSV format).')
+    parser.add_argument('--input_file', type=str, required=True, help='Path to the test file (CSV format).')
     parser.add_argument('--similarity_file', type=str, required=True, help='Path to the userid-centroids (CSV format).')
     parser.add_argument('--output_dir', type=str, required=True, help='Directory to save the results.')
     parser.add_argument('--counts', nargs='+', type=int, default=[10, 20, 50, 100], help='List of counts for evaluation (default: [10, 20, 50, 100]).')
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     run_experiment(experiment_title=args.experiment, 
-                   test_file=args.test_file, 
+                   test_file=args.input_file, 
                    output_dir=args.output_dir, 
                    similarity_file=args.similarity_file,
                    counts=args.counts, 

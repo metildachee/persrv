@@ -1,12 +1,25 @@
 # PerSRV: Personalized Sticker Retrieval with Vision-Language Model
 
-To run:
-```bash
-python3 main.py --experiment "" --test_file <path_to_test_file> --similarity_file "/path/to/similarity_file.csv" --output_dir <path_to_output_directory> --counts 10 20 50 --hyp1 0.3 --hyp2 0 --hyp3 1.0 --size 100
+### 1. Data preparation
+We need to prepare two files: input files and a similarity file.
+
+1. Input file has the the following CSV format;
+```
+uid,query,docid
+0,hello,1234
 ```
 
-* `--test_file`: `userid,query,docid` csv file.
-* `--similarity_file`: `userid,clusterid,centroid_vector,centroid_docid,threshold` csv file.
+2. To prepare `similarity_file`
+```bash 
+python3 gen_personalise.py --data_file "/path/to/input_file.csv" --image_dir "/path/to/image_dir" --output_dir "/path/to/output_file"
+```
+The `similarity_file` will be located at `/path/to/output_file` with headers `userid,clusterid,centroid_vector,centroid_docid,threshold`.
+
+### 2. Run
+```bash
+python3 main.py --experiment "name of experiment" --input_file "/path/to/input_file.csv" --similarity_file "/path/to/similarity_file.csv" --output_dir "/path/to/output_dir" --counts 10 20 50 --hyp1 0.3 --hyp2 0 --hyp3 1.0 --size 100
+```
+
 * The expected data is in the format of;
 ```json
 {
