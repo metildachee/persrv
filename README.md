@@ -1,5 +1,11 @@
 # PerSRV: Personalized Sticker Retrieval with Vision-Language Model
+  - [Running the Code](#running-the-code)
+    - [1. Data preparation](#1.-data-preparation)
+    - [2. Run](#2.-run)
+  - [Huggingface Model](#huggingface-model)
+  - [Citation](#citation)
 
+## Running the Code
 ### 1. Data preparation
 We need to prepare two files: input files and a similarity file.
 
@@ -48,4 +54,19 @@ python3 main.py --experiment "name of experiment" --input_file "/path/to/input_f
 
 ```
 
-The finetuned model will be released online upon the publication of our paper.
+## Huggingface Model
+If you are interested in eliciting query keywords from stickers, please try out our huggingface model, released [here](https://huggingface.co/metchee/persrv).
+
+## Citation
+If you find our code or model helpful please do cite us! :-)
+```
+@misc{chee2024persrvpersonalizedstickerretrieval,
+  title={PerSRV: Personalized Sticker Retrieval with Vision-Language Model},
+  author={Heng Er Metilda Chee and Jiayin Wang and Zhiqiang Guo and Weizhi Ma and Min Zhang},
+  year={2024},
+  eprint={2410.21801},
+  archivePrefix={arXiv},
+  primaryClass={cs.IR},
+  url={https://arxiv.org/abs/2410.21801},
+}
+```
